@@ -1,0 +1,38 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.archivomedico.personal.ui.HomeFragment"
+        android:label="Menú principal" />
+
+    <fragment android:id="@+id/perfilFragment"
+        android:name="com.archivomedico.personal.ui.PerfilFragment"
+        android:label="Perfil del paciente" />
+
+    <fragment android:id="@+id/medsFragment"
+        android:name="com.archivomedico.personal.ui.MedsFragment"
+        android:label="Medicamentos" />
+
+    <fragment android:id="@+id/historialFragment"
+        android:name="com.archivomedico.personal.ui.HistorialFragment"
+        android:label="Historial clínico" />
+
+    <fragment android:id="@+id/sintomasFragment"
+        android:name="com.archivomedico.personal.ui.SintomasFragment"
+        android:label="Síntomas (IA)" />
+
+    <!-- Entrada corregida para apuntar al nuevo MapsFragment -->
+    <fragment
+        android:id="@+id/citasMapaFragment"
+        android:name="com.archivomedico.personal.ui.MapsFragment"
+        android:label="Mapa de Centros Médicos" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.archivomedico.personal.ui.SettingsFragment"
+        android:label="Ajustes" />
+
+</navigation>

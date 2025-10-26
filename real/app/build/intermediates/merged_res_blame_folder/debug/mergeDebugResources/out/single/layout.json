@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/activity_register.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/fragment_citas_mapa.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/fragment_citas_mapa.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/item_saved_location.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/item_saved_location.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/fragment_settings.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/activity_login.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/fragment_maps.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/fragment_maps.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/activity_main.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/dialog_med_edit.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/dialog_med_edit.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/dialog_save_location.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/dialog_save_location.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/activity_patient_onboarding.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/activity_patient_onboarding.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/fragment_home.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/fragment_meds.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/fragment_meds.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/dialog_add_note.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/dialog_add_note.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/fragment_historial.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/fragment_historial.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/fragment_perfil.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/fragment_perfil.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/fragment_sintomas.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/fragment_sintomas.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/item_symptom_history.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/item_symptom_history.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/dialog_med_form.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/dialog_med_form.xml"
+    },
+    {
+        "merged": "com.archivomedico.personal.app-mergeDebugResources-59:/layout/item_med.xml",
+        "source": "com.archivomedico.personal.app-main-62:/layout/item_med.xml"
+    }
+]

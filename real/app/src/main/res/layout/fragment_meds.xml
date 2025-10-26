@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnAgregarMedTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/agregar_medicamento"
+        android:stateListAnimator="@animator/button_lift_effect"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Botón de volver al menú principal -->
+    <Button
+        android:id="@+id/btnVolverMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/volver_menu_principal"
+        android_layout_marginBottom="8dp"
+        android:stateListAnimator="@animator/button_lift_effect"
+        android:contentDescription="@string/volver_menu_principal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMeds"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="8dp"/>
+
+</LinearLayout>

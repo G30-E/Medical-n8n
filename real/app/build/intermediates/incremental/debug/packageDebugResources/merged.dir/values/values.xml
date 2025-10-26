@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="blood_types">
+        <item>O+</item>
+        <item>O-</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+    <string-array name="sex_options">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+        <item>Prefiero no decir</item>
+    </string-array>
+    <color name="bottom_nav_selected">#6200EE</color>
+    <color name="bottom_nav_unselected">#8A000000</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSurface">#000000</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryVariant">#3700B3</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="md_blue_dark">#1976D2</color>
+    <color name="white">#FFFFFF</color>
+    <string name="activar_alarmas">Activar alarmas</string>
+    <string name="agregar_medicamento">Agregar medicamento</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="altura">Altura (cm)</string>
+    <string name="analizando">Analizando…</string>
+    <string name="analizar_ia">Analizar con IA</string>
+    <string name="app_name">Archivomedico</string>
+    <string name="buscar">Buscar</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="citas_mapa">Citas y mapa</string>
+    <string name="compartir_app">Compartir app</string>
+    <string name="confirm_password">Confirmar contraseña</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="dias_label">Días:</string>
+    <string name="edad">Edad *</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="eliminar_nota">Eliminar nota seleccionada</string>
+    <string name="email">Correo electrónico</string>
+    <string name="email_not_found">Correo no registrado</string>
+    <string name="error_conexion_ia">Error al conectar con IA: %1$s</string>
+    <string name="error_ia_template">Error: %1$d %2$s\n%3$s</string>
+    <string name="error_inesperado">Error inesperado: %1$s</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="guardar">Guardar</string>
+    <string name="guardar_perfil">Guardar perfil</string>
+    <string name="hint_agregar_nota">Agregar nota clínica</string>
+    <string name="hint_sintomas">Describe los síntomas…</string>
+    <string name="historial">Historial clínico</string>
+    <string name="historial_label">Historial:</string>
+    <string name="historial_title">Historial de diagnósticos</string>
+    <string name="historial_vacio">No hay diagnósticos previos.</string>
+    <string name="horas_label">Horas:</string>
+    <string name="informacion_adicional">Información adicional</string>
+    <string name="inicio">Inicio</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="mantener_sesion_iniciada">Mantener sesión iniciada</string>
+    <string name="meds">Listado\nde medicamentos</string>
+    <string name="menu_title">Menú principal</string>
+    <string name="modo_oscuro">Modo oscuro</string>
+    <string name="modo_oscuro_desc">Activar o desactivar modo oscuro</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="nombre_completo">Nombre completo *</string>
+    <string name="nombre_medicamento">Nombre del medicamento</string>
+    <string name="numero_expediente">Número de expediente</string>
+    <string name="password">Contraseña</string>
+    <string name="password_too_short">La contraseña es muy corta (mínimo 4)</string>
+    <string name="password_updated">Contraseña actualizada</string>
+    <string name="passwords_do_not_match">Las contraseñas no coinciden</string>
+    <string name="perfil">Perfil del paciente</string>
+    <string name="peso">Peso (kg)</string>
+    <string name="por_favor_describe">Por favor, describe tus síntomas.</string>
+    <string name="recordar_usuario">Recordar usuario</string>
+    <string name="register">Registrarse</string>
+    <string name="registrar_sintomas">Registrar síntomas</string>
+    <string name="reset_password">Restablecer contraseña</string>
+    <string name="resultado_ia_placeholder">Aquí se mostrará el resultado del análisis</string>
+    <string name="resultado_ia_title">Resultado de la IA</string>
+    <string name="salir">Salir</string>
+    <string name="sexo">Sexo *</string>
+    <string name="share_app_message">Estoy usando la app %1$s. ¡Pruébala!</string>
+    <string name="sintomas_ia">Síntomas (IA)</string>
+    <string name="tipo_lugar_hint">Ejemplo: hospital, farmacia, centro médico</string>
+    <string name="tipo_sangre">Tipo de sangre *</string>
+    <string name="ver_historial">Ver historial</string>
+    <string name="volver_menu_principal">Volver al menú principal</string>
+    <style name="Theme.ArchivoMedico" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        
+    </style>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/etName"
+            android:hint="Medicamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/etDose"
+            android:hint="Dosis (ej. 500 mg)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Días"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+
+            <CheckBox android:id="@+id/cbD" android:text="D" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbL" android:text="L" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbM" android:text="M" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbX" android:text="X" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbJ" android:text="J" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbV" android:text="V" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbS" android:text="S" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTimesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horas de las dosis"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnTime1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora 1: --:--"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnTime2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora 2: --:--"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnTime3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora 3: --:--"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnTime4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora 4: --:--"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnTime5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora 5: --:--"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnTime6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hora 6: --:--"
+            android:visibility="gone"/>
+    </LinearLayout>
+</ScrollView>

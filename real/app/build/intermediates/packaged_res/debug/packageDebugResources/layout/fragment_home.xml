@@ -1,0 +1,79 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal">
+
+        <GridLayout
+            android:id="@+id/gridMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:useDefaultMargins="true"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/btnPerfil"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/square_button_bg"
+                android:gravity="center"
+                android:text="@string/perfil"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnMeds"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/square_button_bg"
+                android:gravity="center"
+                android:text="@string/meds"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnHistorial"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/square_button_bg"
+                android:gravity="center"
+                android:text="@string/historial"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSintomas"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@drawable/square_button_bg"
+                android:gravity="center"
+                android:text="@string/sintomas_ia"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btnCitas"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/square_button_bg"
+            android:gravity="center"
+            android:text="Mapa"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

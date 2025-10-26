@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <EditText
+        android:id="@+id/etNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Encabezado"
+        android:inputType="textCapSentences" />
+
+    <EditText
+        android:id="@+id/etNoteBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Cuerpo de la nota"
+        android:inputType="textMultiLine"
+        android:minLines="3" />
+
+</LinearLayout>

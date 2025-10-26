@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:padding="16dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/tipoLugarEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/tipo_lugar_hint"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        tools:ignore="Autofill" />
+    <Button
+        android:id="@+id/buscarLugarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buscar"/>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:tag="map" />
+    <Button
+        android:id="@+id/btnVolverMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/volver_menu_principal"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/volver_menu_principal" />
+</LinearLayout>

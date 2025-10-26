@@ -1,0 +1,243 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "citas",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -784,
+        240
+      ],
+      "id": "a26cc64e-0408-4655-8000-7d4296588491",
+      "name": "Webhook",
+      "webhookId": "e2e21384-67a6-4cc8-b48b-8ac45d380db6"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "04546ac2-b33a-4bf3-8692-17312c357459",
+              "name": "cuerpoDelCorreo",
+              "value": "=<h2>Nueva Registro en MediApp</h2>\n<p>Se ha hecho un nuevo registro para el paciente:</p>\n<ul>\n  <li><strong>Email del Paciente:</strong>{{ $json.body.email }}</li>\n  <li><strong>Fecha y Hora:</strong> {{ $json.body.timestamp }}</li>\n</ul>\n<h3>Encabezado:</h3>\n<pre>{{ $json.body.title }}</pre>\n<h3>Contenido de la Nota:</h3>\n<pre>{{ $json.body.body }}</pre>",
+              "type": "string"
+            },
+            {
+              "id": "17eaf58e-5579-4e62-82ed-6bfe16276f54",
+              "name": "fileContent",
+              "value": "=Nueva Nota en Historial Médico\n==============================\nPaciente: {{ $json.body.email }}\nFecha y Hora: {{ $('Webhook').item.json.body.timestamp }}\n\nContenido de la Nota:\n---------------------\n\n{{ $json.body.body }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -304,
+        352
+      ],
+      "id": "ceaad9c7-4c77-4b47-9818-a96af021abdc",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "toText",
+        "sourceProperty": "fileContent",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        -112,
+        352
+      ],
+      "id": "10665899-d2f2-4120-98a9-1f4b6c230e00",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "name": "=Nota Médica - {{ $('Webhook').item.json.body.note }}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "root",
+          "cachedResultName": "/ (Root folder)"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        32,
+        352
+      ],
+      "id": "acfeda27-233f-4467-ac58-527669ea0b95",
+      "name": "Upload file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "K9JB11EAzOpk2T04",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Webhook').item.json.body.email }}",
+        "subject": "¡Nuevo Registro en tu Historial! Revisalo",
+        "message": "=<h2>Nueva Registro en MediApp</h2>\n<p>Se ha hecho un nuevo registro para el paciente:</p>\n<ul>\n  <li><strong>Email del Paciente:</strong>{{ $('Webhook').item.json.body.email }} </li>\n  <li><strong>Fecha y Hora:</strong>{{ $('Webhook').item.json.body.timestamp }} </li>\n</ul>\n<h3>Encabezado:</h3>\n<pre>{{ $('Webhook').item.json.body.title }} </pre>\n<h3>Contenido de la Nota:</h3>\n<pre> {{ $('Webhook').item.json.body.body }}</pre>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        208,
+        352
+      ],
+      "id": "4ea07b60-8fc4-4778-9027-dab2e60c791f",
+      "name": "Send a message",
+      "webhookId": "2865d7ac-0257-4178-8380-a43a9329cc33",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "tov7Y2TiM5igOLXi",
+          "name": "Gmail account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Webhook').item.json.body.userEmail }}",
+        "subject": "¡Nueva Ubicación agregada en MediAppl! Revisala!!!",
+        "message": "=<h2>Nueva Ubicación Agregada en MediApp</h2>\n<p>Se ha agregado una nueva Ubicación para el paciente:</p>\n<ul>\n  <li><strong>Email del Paciente:</strong> {{ $('Webhook').item.json.body.userEmail }}</li>\n</ul>\n<h3>Nombre:</h3>\n<pre>{{ $('Webhook').item.json.body.name }} </pre>\n<h3>Dirección:</h3>\n<li> {{ $('Webhook').item.json.body.latitude }}, {{ $('Webhook').item.json.body.longitude }}</li>\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -304,
+        96
+      ],
+      "id": "c1317229-4658-4b0d-8d81-c0bd8beb4c23",
+      "name": "Send a message1",
+      "webhookId": "2865d7ac-0257-4178-8380-a43a9329cc33",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "tov7Y2TiM5igOLXi",
+          "name": "Gmail account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1c0bb194-84c2-413d-89c8-941edc7e7378",
+              "leftValue": "={{ $json.body.latitude }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -576,
+        240
+      ],
+      "id": "fc43e94a-6ebc-4cb4-be3c-c71cc6fd9572",
+      "name": "If"
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "node": "Upload file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload file": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "3155dbe045c54cfcffbf95f718429f7223a82b57fd5ad2c253f72459d50b208c"
+  }
+}
